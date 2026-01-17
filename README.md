@@ -220,10 +220,6 @@ Potential improvements (not implemented):
 
 This is a demonstration project. Feel free to use, modify, and learn from it.
 
-## 👤 Author
-
-Built as a comprehensive frontend demonstration project showcasing enterprise-level contract management without frameworks or backend dependencies.
-
 ---
 
 **Note**: This is a frontend-only application intended for demonstration and learning purposes. For production use, consider adding a backend API, database, authentication, and proper contract signing integrations.
