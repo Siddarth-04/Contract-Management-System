@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blueprint Management - Create contract templates">
+  <title>Blueprints - ContractFlow</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">CF</div>
+        <span>ContractFlow</span>
+      </a>
+      <nav class="nav">
+        <a href="dashboard.html"><span>Dashboard</span></a>
+        <a href="blueprint.html" class="active"><span>Blueprints</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1 class="mb-sm">Contract Blueprints</h1>
+      <p class="text-muted mb-xl">Create reusable templates for your contracts</p>
+
+      <!-- Create Blueprint Form -->
+      <div class="form-section">
+        <div class="form-section-header">
+          <h3 class="form-section-title">Create New Blueprint</h3>
+          <p class="form-section-description">Define the structure and fields for your contract template</p>
+        </div>
+
+        <form id="blueprintForm">
+          <div class="form-group">
+            <label class="form-label form-label-required">Blueprint Name</label>
+            <input 
+              type="text" 
+              class="form-input" 
+              id="blueprintName" 
+              placeholder="e.g., Employment Agreement"
+              required
+            >
+            <div class="form-hint">Choose a descriptive name for this contract template</div>
+          </div>
+
+          <!-- Field Builder -->
+          <div class="field-builder">
+            <h4 class="mb-md">Contract Fields</h4>
+            <div id="fieldsList">
+              <p class="text-muted">No fields added yet. Click a field type button below to add fields.</p>
+            </div>
+
+            <div class="add-field-section">
+              <h4 class="mb-sm">Add Field</h4>
+              <p class="text-muted mb-md">Choose a field type to add to your blueprint</p>
+              
+              <div class="field-type-grid">
+                <button type="button" class="field-type-btn" data-type="text">
+                  <span class="field-type-icon">📝</span>
+                  Text Field
+                </button>
+                
+                <button type="button" class="field-type-btn" data-type="date">
+                  <span class="field-type-icon">📅</span>
+                  Date Field
+                </button>
+                
+                <button type="button" class="field-type-btn" data-type="checkbox">
+                  <span class="field-type-icon">☑️</span>
+                  Checkbox
+                </button>
+                
+                <button type="button" class="field-type-btn" data-type="signature">
+                  <span class="field-type-icon">✍️</span>
+                  Signature
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex gap-md mt-lg">
+            <button type="submit" class="btn btn-primary">Create Blueprint</button>
+            <button type="reset" class="btn btn-outline">Reset Form</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Existing Blueprints -->
+      <div class="form-section">
+        <div class="form-section-header">
+          <h3 class="form-section-title">Your Blueprints</h3>
+          <p class="form-section-description">Manage and use your existing contract templates</p>
+        </div>
+
+        <div class="blueprint-list" id="blueprintList">
+          <!-- Blueprints will be rendered here by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module">
+    import { initBlueprintPage } from './js/blueprint.js';
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      initBlueprintPage();
+    });
+  </script>
+</body>
+</html>

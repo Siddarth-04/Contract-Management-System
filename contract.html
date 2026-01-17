@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View Contract - Contract details and lifecycle management">
+  <title>View Contract - ContractFlow</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">CF</div>
+        <span>ContractFlow</span>
+      </a>
+      <nav class="nav">
+        <a href="dashboard.html"><span>Dashboard</span></a>
+        <a href="blueprint.html"><span>Blueprints</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container container-sm">
+      <div class="flex-between mb-xl">
+        <h1>Contract Details</h1>
+        <a href="dashboard.html" class="btn btn-outline">← Back</a>
+      </div>
+
+      <!-- Contract View -->
+      <div id="contractView">
+        <!-- Contract will be rendered here by JavaScript -->
+      </div>
+
+      <!-- Lifecycle Controls -->
+      <div id="lifecycleControls">
+        <!-- Lifecycle controls will be rendered here by JavaScript -->
+      </div>
+    </div>
+  </main>
+
+  <script type="module">
+    import { initContractViewPage } from './js/contract.js';
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      initContractViewPage();
+    });
+  </script>
+</body>
+</html>

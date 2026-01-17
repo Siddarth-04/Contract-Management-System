@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ContractFlow - Modern contract management platform for creating, tracking, and managing contracts">
+  <title>ContractFlow - Contract Management Platform</title>
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    /* Landing Page Specific Styles */
+    .hero {
+      background: linear-gradient(135deg, #0891b2 0%, #06b6d4 50%, #22d3ee 100%);
+      padding: 5rem 0;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-lg);
+    }
+    
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: var(--spacing-lg);
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .hero-description {
+      font-size: 1.25rem;
+      margin-bottom: var(--spacing-2xl);
+      color: rgba(255,255,255,0.95);
+      line-height: 1.8;
+    }
+    
+    .hero-actions {
+      display: flex;
+      gap: var(--spacing-md);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .hero-actions .btn {
+      padding: 1rem 2rem;
+      font-size: 1.0625rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    .hero-actions .btn-primary {
+      background: white;
+      color: var(--primary);
+    }
+    
+    .hero-actions .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+    
+    .hero-actions .btn-secondary {
+      background: rgba(255,255,255,0.2);
+      color: white;
+      border: 2px solid white;
+    }
+    
+    .hero-actions .btn-secondary:hover {
+      background: rgba(255,255,255,0.3);
+    }
+    
+    .features {
+      padding: 4rem 0;
+    }
+    
+    .features-header {
+      text-align: center;
+      margin-bottom: var(--spacing-2xl);
+    }
+    
+    .features-header h2 {
+      font-size: 2.5rem;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .features-header p {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .feature-card {
+      text-align: center;
+      padding: var(--spacing-2xl);
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: var(--spacing-lg);
+      display: block;
+      filter: grayscale(0.2);
+    }
+    
+    .feature-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .feature-card p {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+    }
+    
+    .feature-card:hover .feature-icon {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero-description {
+        font-size: 1.125rem;
+      }
+      
+      .hero-actions {
+        flex-direction: column;
+      }
+      
+      .hero-actions .btn {
+        width: 100%;
+      }
+      
+      .features-header h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">CF</div>
+        <span>ContractFlow</span>
+      </a>
+      <nav class="nav">
+        <a href="dashboard.html"><span>Dashboard</span></a>
+        <a href="blueprint.html"><span>Blueprints</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Contract Management Made Simple</h1>
+        <p class="hero-description">
+          Create reusable contract templates, track lifecycle states, and manage all your contracts 
+          from a centralized dashboard. Fast, secure, and completely local.
+        </p>
+        <div class="hero-actions">
+          <a href="dashboard.html" class="btn btn-primary">View Dashboard</a>
+          <a href="blueprint.html" class="btn btn-secondary">Create Blueprint</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <div class="features-header">
+          <h2>Everything You Need</h2>
+          <p>Powerful features to streamline your contract management workflow</p>
+        </div>
+
+        <div class="grid grid-3">
+          <a href="blueprint.html" class="card feature-card">
+            <span class="feature-icon">📋</span>
+            <h3>Blueprint Templates</h3>
+            <p>Create reusable contract blueprints with custom fields, validations, and structure</p>
+          </a>
+
+          <a href="dashboard.html" class="card feature-card">
+            <span class="feature-icon">🔄</span>
+            <h3>Lifecycle Management</h3>
+            <p>Track contracts through their complete lifecycle from creation to signing and locking</p>
+          </a>
+
+          <a href="dashboard.html" class="card feature-card">
+            <span class="feature-icon">📊</span>
+            <h3>Dashboard Overview</h3>
+            <p>Monitor all contracts with real-time statistics, filtering, and search capabilities</p>
+          </a>
+
+          <a href="dashboard.html" class="card feature-card">
+            <span class="feature-icon">⚡</span>
+            <h3>Status Control</h3>
+            <p>Enforce valid lifecycle transitions and maintain contract integrity throughout the process</p>
+          </a>
+
+          <a href="contract.html" class="card feature-card">
+            <span class="feature-icon">🔒</span>
+            <h3>Secure & Locked</h3>
+            <p>Lock completed contracts to make them immutable and preserve their final state</p>
+          </a>
+
+          <a href="index.html" class="card feature-card">
+            <span class="feature-icon">💾</span>
+            <h3>Fast & Local</h3>
+            <p>All data stored locally in your browser. No server required, instant performance</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module">
+    import { initializeSampleData } from './js/sample-data.js';
+    
+    // Initialize sample data on first load
+    document.addEventListener('DOMContentLoaded', () => {
+      initializeSampleData();
+    });
+  </script>
+</body>
+</html>
